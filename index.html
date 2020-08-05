@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weather</title>
-    
-
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script src="script.js"></script>   
 </head>
 <body>
-    <input readonly id="name" type="text">
-    <input readonly id="latitude" type="text">
-    <input readonly id="longitude"type="text">
-    <pre id="js"></pre>
-    <img id="icon" src="" alt="" srcset="">
-    <script src="script.js"></script>
+    
+    <div id="container">
+        <div id="sectionOne">
+            <div id="city_country">
+                <h1 id="city"></h1>
+                <h3 id="country"></h3>
+            </div>
+            
+            <img id ="Icon" src="" alt="weather icon">
+            <h1 id="temp"></h1>
+        </div>
+        <div id="sectionTwo">
+            <h2 id="description"></h2>
+            <h2 id="wind"></h2>
+            <h2 id="humidity"></h2>
+        </div>      
+    </div>   
 </body>
 </html>
