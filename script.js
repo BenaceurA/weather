@@ -1,4 +1,4 @@
-var isoCountries = {
+let isoCountries = {
     'AF' : 'Afghanistan',
     'AX' : 'Aland Islands',
     'AL' : 'Albania',
@@ -246,6 +246,8 @@ var isoCountries = {
     'ZW' : 'Zimbabwe'
 };
 
+let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
 function getCountryName (countryCode) {
     if (isoCountries.hasOwnProperty(countryCode)) {
         return isoCountries[countryCode];
@@ -295,11 +297,14 @@ async function getposition(){
     const tempF = Math.floor(parseInt(tempC) *(9/5) + 32);
     const wind = data.wind.speed;
     const humidity = data.main.humidity;
+    let date = new Date();
+    const day = days[date.getDay()];
     
 
     document.querySelector("#Icon").setAttribute("src",icon);
     document.querySelector("#city").innerHTML = city;
     document.querySelector("#temp").innerHTML = tempC +"°C | "+tempF+"°F";
+    document.querySelector("#day").innerHTML = day;
     document.querySelector("#description").innerHTML = (description.charAt(0).toUpperCase()+description.slice(1)) ;
     document.querySelector("#wind").innerHTML = "Wind : "+wind +"m/s";    
     document.querySelector("#country").innerHTML = getCountryName(data.sys.country);

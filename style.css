@@ -37,16 +37,30 @@ body{
 }
 #city_country{
     padding-top: 5px;
-    margin-top:7vh;
+    margin-top:6vh;
     margin-left: 2vh;
     margin-right: 3vh;  
 }
+#city{
+    font-size: 40px;
+}
+#country{
+    font-size: 2.5vh;
+    font-weight: 500;
+}
 #temp{
-    margin-top: 7vh;
+    margin-top: 5.5vh;
     margin-right : 2vh;
-    margin-left: 1vh;
+    
     font-size: 5vh;
     font-weight: 300;
+}
+#temp_day{
+    margin-left: 1vh;
+}
+#day{
+    font-size: 2.5vh;
+    font-weight: 500;
 }
 #sectionTwo{
     display: flex;
